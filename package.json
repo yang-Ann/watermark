@@ -1,0 +1,23 @@
+{
+  "name": "@anlib/watermark",
+  "version": "0.0.1",
+  "description": "简单的水印生成",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.html"
+  ],
+  "homepage": "https://github.com/yang-Ann/watermark",
+  "bugs": {
+    "url": "https://github.com/yang-Ann/watermark/issues"
+  },
+  "scripts": {
+    "dev": "tsc index.ts -t es6 --outDir dist -d -w"
+  },
+  "author": "An <331536495@qq.com> (https://ann-yang.gitee.io/note-sites/)",
+  "keywords": [
+    "watermark"
+  ],
+  "license": "MIT"
+}

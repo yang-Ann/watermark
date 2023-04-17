@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  #container1, 
+  #container2 {
+    width: 500px;
+    height: 46vh;
+    border: 1px solid red;
+    margin: 10px 0;
+  }
+</style>
+
+<body>
+  <div id="container1"></div>
+  <div id="container2"></div>
+
+  <script type="module">
+    import WaveShaperNode from "../dist/index.js";
+    const instace = new WaveShaperNode({
+      context: "我是水印",
+      container: "#container1", // 插入到那个容器里面, 不指定则是 body
+      rotate: -30
+    });
+
+    setTimeout(() => {
+      instace.render({
+        fontSize: 12,
+        context: "我变了",
+        color: "red",
+        rotate: -10,
+        width: 100,
+        height: 50,
+        container: "#container2",
+      });
+    }, 1500);
+  </script>
+</body>
+</html>
